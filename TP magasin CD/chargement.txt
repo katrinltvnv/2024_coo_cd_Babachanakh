@@ -1,0 +1,9 @@
+
+Sur le diagramme est représenté le processus de chargement des données sur les disques musicaux (CD) dans un magasin.
+
+Au début, un objet ChargeurMagasin est créé avec l'indication du répertoire (rep) où sont stockés les fichiers XML. 
+Ensuite, la méthode chargerMagasin de l'objet ChargeurMagasin est appelée. Cette méthode est responsable de la création d'un objet Magasin, qui contiendra tous les CD. 
+Puis, pour chaque fichier dans le répertoire spécifié, un nouvel objet ChargeurCD est créé. 
+Pour chacun de ces objets, la méthode chargerCD est appelée, qui crée un objet CD avec les données d'un disque spécifique. 
+Ensuite, l'information sur les pistes est extraite (méthode extrairePiste) et chaque piste extraite est ajoutée à l'objet CD (méthode ajouterPiste). 
+À la fin, chaque objet CD chargé est ajouté au Magasin à l'aide de la méthode ajouteCd.

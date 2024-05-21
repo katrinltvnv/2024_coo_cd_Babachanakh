@@ -97,5 +97,9 @@ public class CD {
 		return (resultat);
 	}
 
-	// TODO 
+
+
+	public int compareTo(CD autre) {
+		return this.nomCD.compareTo(autre.nomCD);
+	}
 }

@@ -16,6 +16,7 @@ public class Magasin {
 	 */
 	private ArrayList<CD> listeCds;
 
+
 	/**
 	 * construit un magasin par defaut qui ne contient pas de CD
 	 */
@@ -68,6 +69,18 @@ public class Magasin {
 		return(res);
 	}
 
-	// TODO  ajouter une methode de tri
+	public void trierAriste() {
+		throw new Error();
+	}
+
+
+	public void TriParAlbum() {
+		throw new Error("errour");
+	}
+
+	public void TriParArtiste() {
+		throw new Error("errour");
+	}
+
 
 }

@@ -24,7 +24,7 @@ public class TestChargeurMagasin {
             Magasin magasin = chargeur.chargerMagasin();
 
             // Vérification
-            int nombreAttenduDeCds = 5; // Ajustez cette valeur en fonction de votre cas de test
+            int nombreAttenduDeCds = 5;
             assertEquals("Le nombre de CDs charges doit etre 5.",
                     nombreAttenduDeCds, magasin.getNombreCds());
         } catch (FileNotFoundException e) {
@@ -44,18 +44,3 @@ public class TestChargeurMagasin {
 
 
 }
-/*
-    @Test(expected = FileNotFoundException.class)
-
-     * Test de la méthode chargerMagasin avec un répertoire invalide.
-
-    public void testChargerMagasinAvecRepertoireInvalide() throws FileNotFoundException {
-        // Préparation des données
-        String cheminInvalide = "/chemin/vers/le/repertoire/invalide";
-        ChargeurMagasin chargeur = new ChargeurMagasin(cheminInvalide);
-
-        // Méthode testée
-        chargeur.chargerMagasin(); // Doit lever une FileNotFoundException
-    }
-
-*/

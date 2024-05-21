@@ -1,0 +1,28 @@
+@startuml
+actor User as user
+participant "Magasin" as store
+participant "List<CD>" as cds
+participant "CD" as cd
+
+user -> store: trierParTitre()
+activate store
+
+store -> cds: sort(comparator)
+activate cds
+
+cds -> cd: [for each CD] compareTo(other: CD)
+activate cd
+cd --> cds: return comparison result
+deactivate cd
+
+cds -> cd: [for each CD] compareTo(other: CD)
+activate cd
+cd --> cds: return comparison result
+deactivate cd
+
+cds --> store: return sorted list
+deactivate cds
+
+store --> user: display sorted CDs
+deactivate store
+@enduml

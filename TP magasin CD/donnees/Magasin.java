@@ -74,8 +74,21 @@ public class Magasin {
 	}
 
 
-	public void TriParAlbum() {
-		throw new Error("errour");
+	/**
+	 * Tri des CD dans le magasin par titre d'album a l'aide du tri par selection
+	 */
+	public void trierParAlbum() {
+		for (int i = 0; i < listeCds.size(); i++) {
+			int indexMin = i;
+			for (int j = i + 1; j < listeCds.size(); j++) {
+				if (listeCds.get(j).getNomCD().compareTo(listeCds.get(indexMin).getNomCD()) < 0) {
+					indexMin = j;
+				}
+			}
+			CD temp = listeCds.get(i);
+			listeCds.set(i, listeCds.get(indexMin));
+			listeCds.set(indexMin, temp);
+		}
 	}
 
 	public void TriParArtiste() {

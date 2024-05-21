@@ -102,4 +102,8 @@ public class CD {
 	public int compareTo(CD autre) {
 		return this.nomCD.compareTo(autre.nomCD);
 	}
+
+	public String getNomCD() {
+		return nomCD;
+	}
 }
